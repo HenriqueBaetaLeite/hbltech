@@ -1,56 +1,63 @@
 import Image from "next/image";
+import { createPortal } from "react-dom";
+import { useEffect, useState } from "react";
 
 export default function Modal({
+  isOpen,
+  onClose,
   images,
-  title,
   currentIndex,
   prevImage,
   nextImage,
   fade,
-  setIsModalOpen,
 }) {
-  return (
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
+
+  if (!isOpen || !mounted) return null;
+
+  return createPortal(
     <div
-      className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-4"
-      onClick={() => setIsModalOpen(false)}
+      className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-2 sm:p-4"
+      onClick={onClose}
     >
       <div
-        className="relative max-w-full max-h-full flex items-center justify-center"
-        onClick={(e) => e.stopPropagation()} // evita fechar ao clicar na imagem
+        className="relative w-full h-full max-w-5xl max-h-[90vh] flex items-center justify-center"
+        onClick={(e) => e.stopPropagation()}
       >
         <Image
-          priority
-          width={800}
-          height={800}
           src={images[currentIndex]}
-          alt={title}
-          className={`object-contain max-h-screen max-w-full transition-opacity duration-300 ${
+          alt="Produto"
+          fill
+          className={`object-contain transition-opacity duration-300 ${
             fade ? "opacity-100" : "opacity-0"
           }`}
         />
 
-        {/* Botões de Navegação no Modal */}
+        {/* Navegação */}
         <button
           onClick={prevImage}
-          className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white rounded-full p-2 hover:bg-black/70 transition cursor-pointer"
+          className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-white rounded-full p-2 sm:p-3 hover:bg-black/70 transition cursor-pointer"
         >
           ‹
         </button>
         <button
           onClick={nextImage}
-          className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white rounded-full p-2 hover:bg-black/70 transition cursor-pointer"
+          className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-white rounded-full p-2 sm:p-3 hover:bg-black/70 transition cursor-pointer"
         >
           ›
         </button>
 
-        {/* Fechar Modal */}
+        {/* Fechar */}
         <button
-          onClick={() => setIsModalOpen(false)}
-          className="absolute top-2 right-2 text-white text-3xl font-bold hover:text-gray-300 cursor-pointer"
+          onClick={onClose}
+          className="absolute top-2 sm:top-4 right-2 sm:right-4 text-white text-3xl font-bold hover:text-gray-300 cursor-pointer"
         >
           ×
         </button>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }
