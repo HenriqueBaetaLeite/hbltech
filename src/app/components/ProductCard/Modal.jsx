@@ -10,6 +10,7 @@ export default function Modal({
   prevImage,
   nextImage,
   fade,
+  product,
 }) {
   const [mounted, setMounted] = useState(false);
 
@@ -28,7 +29,7 @@ export default function Modal({
       >
         <Image
           src={images[currentIndex]}
-          alt="Produto"
+          alt={product}
           fill
           className={`object-contain transition-opacity duration-300 ${
             fade ? "opacity-100" : "opacity-0"

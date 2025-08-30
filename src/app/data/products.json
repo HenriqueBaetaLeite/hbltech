@@ -1,17 +1,23 @@
 [
   {
     "id": 1,
-    "title": "Porta Micro SD Card",
-    "price": "R$ 79,90",
-    "images": ["/images/microsd_1.png", "/images/microsd_2.png", "/images/microsd_3.webp"],
-    "description": "Porta cartão micro sd e porta micro chip. Ultra fino, cabem 4 cartões microSD e 1 adapadtaor.",
+    "title": "Porta cartão microSD",
+    "price": "R$ 27,90",
+    "images": [
+      "/images/microsd_1.png",
+      "/images/microsd_2.png",
+      "/images/microsd_3.webp"
+    ],
+    "description": "Porta cartão microSD e porta micro chip.Ultra fino, cabem 4 cartões microSD e 1 adaptador; no lugar do microSD pode-se colocar um micro chip.",
     "buyLink": "http://www.google.com"
   },
   {
     "id": 2,
     "title": "Suporte para fone de ouvido HeadSet",
     "price": "R$ 199,90",
-    "images": ["/images/fone-bluetooth.jpg"],
+    "images": [
+      "/images/fone-bluetooth.jpg"
+    ],
     "description": "yes",
     "buyLink": "http://www.google.com"
   }

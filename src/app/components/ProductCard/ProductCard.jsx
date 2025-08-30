@@ -59,6 +59,7 @@ export default function ProductCard({ product }) {
         prevImage={prevImage}
         nextImage={nextImage}
         fade={fade}
+        product={title}
       />
     </div>
   );
