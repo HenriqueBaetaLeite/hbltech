@@ -8,17 +8,19 @@
       "/images/microsd_2.png",
       "/images/microsd_3.webp"
     ],
-    "description": "Porta cartão microSD e porta micro chip.Ultra fino, cabem 4 cartões microSD e 1 adaptador; no lugar do microSD pode-se colocar um micro chip.",
+    "description": "Porta cartão microSD e porta cartão SIM (chip). Ultra fino, cabem 4 cartões microSD e 1 adaptador; no lugar do microSD pode-se colocar um cartão SIM.",
     "buyLink": "http://www.google.com"
   },
   {
     "id": 2,
     "title": "Suporte para fone de ouvido HeadSet",
-    "price": "R$ 199,90",
+    "price": "R$ 73,00",
     "images": [
-      "/images/fone-bluetooth.jpg"
+      "/images/head_hook_1.webp",
+      "/images/head_hook_2.jpeg",
+      "/images/head_hook_3.jpeg"
     ],
-    "description": "yes",
+    "description": "Suporte para fone de ouvido no estilo HeadSet, feito para ser acoplado em mesas, prateleiras, etc. Visual moderno e futurista. Espessura máxima suportada: mm.",
     "buyLink": "http://www.google.com"
   }
 ]

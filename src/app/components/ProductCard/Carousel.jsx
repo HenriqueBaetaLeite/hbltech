@@ -35,7 +35,7 @@ export default function Carousel({ images, title, onImageClick }) {
 
   useEffect(() => {
     if (isHovered) return;
-    const interval = setInterval(nextImage, 12000);
+    const interval = setInterval(nextImage, 9000);
     return () => clearInterval(interval);
   }, [isHovered]);
 
@@ -88,7 +88,7 @@ export default function Carousel({ images, title, onImageClick }) {
       </button>
 
       {/* Indicadores */}
-      <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex gap-2">
+      {/* <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex gap-2">
         {images.map((_, index) => (
           <button
             key={index}
@@ -98,7 +98,7 @@ export default function Carousel({ images, title, onImageClick }) {
             } cursor-pointer`}
           />
         ))}
-      </div>
+      </div> */}
     </div>
   );
 }
