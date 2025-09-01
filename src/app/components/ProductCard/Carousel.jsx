@@ -27,11 +27,11 @@ export default function Carousel({ images, title, onImageClick }) {
     setFade(true);
   };
 
-  const goToImage = (index) => {
-    setFade(false);
-    setTimeout(() => setCurrentIndex(index), 200);
-    setFade(true);
-  };
+  // const goToImage = (index) => {
+  //   setFade(false);
+  //   setTimeout(() => setCurrentIndex(index), 200);
+  //   setFade(true);
+  // };
 
   useEffect(() => {
     if (isHovered) return;
