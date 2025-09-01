@@ -10,11 +10,15 @@ export default function Store() {
       {/* Cabeçalho */}
       <header className="text-center mb-8">
         <h1 className="text-6xl font-bold text-orange-500 mb-2">
-          Boas-vindas à nossa lojinha!
+          Boas vindas à nossa lojinha!
         </h1>
-        <p className="text-gray-700 text-2xl max-w-xl mx-auto">
+        <p className="text-gray-700 text-2xl max-w-xl mx-auto mb-4">
           Aqui você vai encontrar produtos impressos em 3D com material PLA,
           feitos com carinho e qualidade.
+        </p>
+        <p className="text-gray-700 text-2xl max-w-xl mx-auto">
+          Caso tenha alguma dúvida sobre nossos produtos, entre em contato e vamos te ajudar!
+          Ao realizar a compra, leia com atenção as instruções.
         </p>
       </header>
 

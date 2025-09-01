@@ -41,11 +41,11 @@ export default function ProductCard({ product }) {
 
       <div className="p-4">
         <h2 className="text-lg font-semibold text-gray-800">{title}</h2>
-        <p className="text-blue-600 text-xl font-bold mt-2">{price}</p>
+        <p className="text-green-700 text-xl font-bold mt-2">{price}</p>
         <p className="text-black text-sm font-bold mt-2">{description}</p>
 
         <a href={buyLink} target="_blank" rel="noopener noreferrer">
-          <button className="mt-4 flex items-center justify-center gap-2 w-full bg-blue-600 text-white py-2 px-4 rounded-xl hover:bg-blue-700 transition cursor-pointer">
+          <button className="mt-4 flex items-center justify-center gap-2 w-full bg-green-600 text-white py-2 px-4 rounded-xl hover:bg-green-700 transition cursor-pointer">
             <ShoppingCartIcon className="h-5 w-5" />
             Comprar
           </button>
