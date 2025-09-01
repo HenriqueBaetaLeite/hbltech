@@ -19,7 +19,8 @@ export default function Store() {
       </header>
 
       {/* Grid de produtos */}
-      <main className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      {/* <main className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center"> */}
+        <main className="grid gap-4 sm:gap-6 justify-items-center grid-cols-[repeat(auto-fit,minmax(18rem,1fr))]">
         {products.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}

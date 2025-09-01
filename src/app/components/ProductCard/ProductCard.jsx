@@ -35,7 +35,8 @@ export default function ProductCard({ product }) {
   };
 
   return (
-    <div className="w-72 bg-orange-300 rounded-2xl shadow-md overflow-hidden border transform transition duration-300 hover:shadow-xl hover:scale-105 relative">
+    // <div className="w-72 bg-orange-300 rounded-2xl shadow-md overflow-hidden border transform transition duration-300 hover:shadow-xl hover:scale-105 relative">
+     <div className="max-w-xs w-full bg-orange-300 rounded-2xl shadow-md overflow-hidden border transform transition duration-300 hover:shadow-xl hover:scale-105 relative">
       <Carousel images={images} title={title} onImageClick={openModal} />
 
       <div className="p-4">
